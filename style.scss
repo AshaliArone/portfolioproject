@@ -1,0 +1,118 @@
+body{
+    font-family: sans-serif;
+    background-color: #040404;
+    color: #fff;
+    position: relative;
+    background: transparent;
+
+    &::before{
+        content: "";
+        background: #040404 top right no-repeat; //can place an image if you want
+        background-size: cover;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: -1;
+    }
+}
+
+$primary-color: rgb(188, 247, 247);
+$secondary-color: rgb(122, 123, 211); 
+
+a{
+    color: $primary-color;
+    text-decoration: none;
+    transform: .5s;
+    &:hover{
+        color: $secondary--color;
+        text-decoration: none;
+        transition: .5s;
+    }
+}
+
+// The Landing Page //
+#landing{
+    width: 100%;
+    height: 100vh;
+    background: url("https://images.pexels.com/photos/1274260/pexels-photo-1274260.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") top right;
+    background: cover;
+    position: relative;
+
+&::before{
+        content: "";
+        background: rgba(0,0,0, 0.65);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 15px;
+
+    h1{
+        margin: 0 0 10px 0;
+        font-size: 64px;
+        font-family: fantasy;
+        color: #fff;
+    }
+        h2{
+            color: #eee;
+            margin-bottom: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    
+        .btn-scroll{
+            transition: .5s;
+            color: $primary-color;
+        }
+    
+        i{
+            font-size: 48px;
+        }
+    
+        $:hover{
+            color: $secondary-color;
+        }
+
+        .skills{
+            height: 60px;
+            display: block;
+            background: none;
+            border-radius: 0;
+
+            .skill{
+                padding: 10px 0;
+                margin: 0;
+                text-transform: uppercase;
+                display: block;
+                font-weight: 500;
+                font-family: sans-serif;
+                color: #fff;
+            }
+
+            .val{
+                float: right;
+                font-style: normal;
+            }
+        }
+    }
+
+    .progress-bar-wrap{
+        background: lightgrey;
+    }
+
+    .progress-bar{
+        height: 10px;
+        background: $primary-color;
+    }
+    
+    background: line-gardient(to right, $primary-color, $secondary-color);
+    
+
+}
